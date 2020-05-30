@@ -5,7 +5,7 @@ module.exports = {
     title: 'Brandmeister Top Activity',
     description:
       'Brandmeister Top Activity provides a way to see the most active talk groups and users on the Brandmeister DMR network',
-    author: `@alexgladd`,
+    author: '@alexgladd',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -14,6 +14,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `fonts`,
+        path: `${__dirname}/src/fonts`,
       },
     },
     `gatsby-transformer-sharp`,
