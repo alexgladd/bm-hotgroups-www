@@ -3,7 +3,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Brandmeister Top Activity',
-    description: 'Brandmeister Top Activity provides a way to see the most active talk groups and users on the Brandmeister DMR network',
+    description:
+      'Brandmeister Top Activity provides a way to see the most active talk groups and users on the Brandmeister DMR network',
     author: `@alexgladd`,
   },
   plugins: [
