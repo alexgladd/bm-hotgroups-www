@@ -6,6 +6,7 @@ import Header from './Header';
 import useSiteFonts from '../hooks/siteFonts';
 import { getFontStyles, globalStyles } from './theme';
 import './reset.css';
+import Footer from './Footer';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -34,12 +35,9 @@ export default function Layout({ title, children }) {
         }}
       >
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </div>
+
+      <Footer />
     </>
   );
 }
