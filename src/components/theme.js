@@ -21,16 +21,16 @@ export const sizes = {
   footerSize: '2.5rem',
 };
 
+export const transitions = {
+  timeMs: '200ms',
+};
+
 export const globalStyles = css`
   body {
     background-color: ${colors.background};
     font-family: 'Noto Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  }
-
-  h1 {
-    font-size: 1.2rem;
   }
 
   h2 {

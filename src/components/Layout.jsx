@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
-import Header from './header';
 import SiteMetadata from './SiteMetadata';
+import Header from './Header';
 import useSiteFonts from '../hooks/siteFonts';
 import { getFontStyles, globalStyles } from './theme';
 import './reset.css';
@@ -24,7 +24,8 @@ export default function Layout({ title, children }) {
       <Global styles={fontStyles} />
       <Global styles={globalStyles} />
 
-      <Header siteTitle={title} />
+      <Header />
+
       <div
         style={{
           margin: `0 auto`,
