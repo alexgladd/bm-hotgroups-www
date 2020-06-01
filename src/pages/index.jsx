@@ -10,8 +10,8 @@ const Center = styled.div`
   margin-top: 1rem;
 `;
 
-const IndexPage = () => (
-  <Layout title="About">
+const IndexPage = ({ location }) => (
+  <Layout title="About" path={location.pathname}>
     <Section title="About">
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut

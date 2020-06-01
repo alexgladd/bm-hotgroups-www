@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import Navigation from './Navigation';
 import { colors, sizes } from './theme';
@@ -47,11 +48,15 @@ const BurgerMenu = styled.img`
   height: 1.25rem;
 `;
 
-const propTypes = {};
+const propTypes = {
+  path: PropTypes.string,
+};
 
-const defaultProps = {};
+const defaultProps = {
+  path: '/',
+};
 
-export default function Header() {
+export default function Header({ path }) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -62,7 +67,7 @@ export default function Header() {
         <BurgerMenu src={burgerMenu} alt="Hamburger menu" />
       </SiteMenu>
 
-      <Navigation showNav={menuOpen} onClose={() => setMenuOpen(false)} />
+      <Navigation path={path} showNav={menuOpen} onClose={() => setMenuOpen(false)} />
     </SiteHeader>
   );
 }

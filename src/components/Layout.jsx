@@ -26,11 +26,14 @@ const SiteMain = styled.main`
 const propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  path: PropTypes.string,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  path: '/',
+};
 
-export default function Layout({ title, children }) {
+export default function Layout({ title, children, path }) {
   const fonts = useSiteFonts();
   const fontStyles = getFontStyles(fonts.regular, fonts.medium, fonts.bold);
 
@@ -40,7 +43,7 @@ export default function Layout({ title, children }) {
       <Global styles={fontStyles} />
       <Global styles={globalStyles} />
 
-      <Header />
+      <Header path={path} />
 
       <SiteMain>
         { children }

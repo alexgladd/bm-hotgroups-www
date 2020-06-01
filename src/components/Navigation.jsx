@@ -65,14 +65,16 @@ const NavItem = styled.li`
 const propTypes = {
   showNav: PropTypes.bool,
   onClose: PropTypes.func,
+  path: PropTypes.string,
 };
 
 const defaultProps = {
   showNav: true,
   onClose: undefined,
+  path: '/',
 };
 
-export default function Navigation({ showNav, onClose }) {
+export default function Navigation({ showNav, onClose, path }) {
   return (
     <SiteNav show={showNav} onClick={onClose} role="navigation">
       <NavList>
@@ -80,7 +82,7 @@ export default function Navigation({ showNav, onClose }) {
           <a href="https://app.brandmeisteractivity.live/">Launch the App</a>
         </NavItem>
         
-        { window.location.pathname !== '/' &&
+        { path !== '/' &&
         <NavItem>
           <Link to="/">Home</Link>
         </NavItem>
