@@ -72,8 +72,6 @@ const defaultProps = {
 };
 
 export default function Navigation({ showNav }) {
-  console.log('navigation', showNav);
-
   return (
     <SiteNav show={showNav} role="navigation">
       <NavList>

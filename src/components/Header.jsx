@@ -54,16 +54,11 @@ const defaultProps = {};
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const handleClick = () => {
-    console.log('menu clicked', menuOpen);
-    setMenuOpen(!menuOpen);
-  };
-
   return (
     <SiteHeader>
       <SiteTitle>Brandmeister Top Activity</SiteTitle>
 
-      <SiteMenu onClick={handleClick}>
+      <SiteMenu onClick={() => setMenuOpen(!menuOpen)}>
         <BurgerMenu src={burgerMenu} alt="Hamburger menu" />
       </SiteMenu>
 
