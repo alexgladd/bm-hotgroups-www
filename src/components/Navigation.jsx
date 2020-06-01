@@ -64,15 +64,17 @@ const NavItem = styled.li`
 
 const propTypes = {
   showNav: PropTypes.bool,
+  onClose: PropTypes.func,
 };
 
 const defaultProps = {
   showNav: true,
+  onClose: undefined,
 };
 
-export default function Navigation({ showNav }) {
+export default function Navigation({ showNav, onClose }) {
   return (
-    <SiteNav show={showNav} role="navigation">
+    <SiteNav show={showNav} onClick={onClose} role="navigation">
       <NavList>
         <NavItem>
           <a href="https://app.brandmeisteractivity.live/">Launch the App</a>

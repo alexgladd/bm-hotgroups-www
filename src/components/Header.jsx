@@ -62,7 +62,7 @@ export default function Header() {
         <BurgerMenu src={burgerMenu} alt="Hamburger menu" />
       </SiteMenu>
 
-      <Navigation showNav={menuOpen} />
+      <Navigation showNav={menuOpen} onClose={() => setMenuOpen(false)} />
     </SiteHeader>
   );
 }
