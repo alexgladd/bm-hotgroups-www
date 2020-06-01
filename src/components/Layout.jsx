@@ -1,12 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
+import styled from '@emotion/styled';
 import SiteMetadata from './SiteMetadata';
 import Header from './Header';
 import useSiteFonts from '../hooks/siteFonts';
-import { getFontStyles, globalStyles } from './theme';
+import { sizes, getFontStyles, globalStyles } from './theme';
 import './reset.css';
 import Footer from './Footer';
+
+const SiteMain = styled.main`
+  margin-top: ${sizes.headerSize};
+  padding: 1.25rem;
+  min-height: calc(100vh - ${sizes.headerSize} - ${sizes.footerSize});
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+  gap: 1rem;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 2fr 1fr;
+  }
+`;
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -27,15 +42,9 @@ export default function Layout({ title, children }) {
 
       <Header />
 
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
-        <main>{children}</main>
-      </div>
+      <SiteMain>
+        { children }
+      </SiteMain>
 
       <Footer />
     </>
