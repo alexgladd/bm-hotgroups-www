@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
+import MainCarosel from '../components/MainCarosel';
 import SupportBtn from '../components/SupportBtn';
 
 const Center = styled.div`
@@ -12,6 +13,8 @@ const Center = styled.div`
 
 const IndexPage = ({ location }) => (
   <Layout title="About" path={location.pathname}>
+    <MainCarosel />
+
     <Section title="About">
       <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
