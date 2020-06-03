@@ -1,0 +1,17 @@
+[
+  {
+    "src": "https://images.unsplash.com/photo-1466428996289-fb355538da1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
+    "title": "Mixer closeup",
+    "caption": "A cool mixer board"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1453575969485-2644bab303a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "title": "Mixer in studio",
+    "caption": "Another cool mixer board"
+  },
+  {
+    "src": "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80",
+    "title": "Microphone in lights",
+    "caption": "An awesome looking microphone"
+  }
+]
