@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import MainCarosel from '../components/MainCarosel';
+import News from '../components/News';
 import SupportBtn from '../components/SupportBtn';
 
 const Center = styled.div`
@@ -34,14 +35,7 @@ const IndexPage = ({ location }) => (
       </p>
     </Section>
 
-    <Section title="News">
-      <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Amet justo donec enim diam vulputate ut pharetra sit. Fermentum
-      et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Magna eget est lorem ipsum
-      dolor sit amet.
-      </p>
-    </Section>
+    <News />
 
     <Section title="Support">
       <p>

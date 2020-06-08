@@ -19,7 +19,10 @@ const SiteMain = styled.main`
   gap: 1rem;
 
   @media (min-width: 1024px) {
-    grid-template-columns: 2fr 1fr;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: minmax(0, 2fr) 1fr;
   }
 `;
 

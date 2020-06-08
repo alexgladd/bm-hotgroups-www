@@ -94,6 +94,30 @@ const SelectorBtn = styled.button`
   `}
 `;
 
+const Cta = styled.div`
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+`;
+
+const CtaButton = styled.a`
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  background-color: ${colors.primary};
+  color: ${colors.background};
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: 0px 4px 0px ${colors.lightPrimary};
+  transform: translateY(2px);
+  transition: transform ${transitions.timeMs} ease-in-out;
+
+  &:hover {
+    text-decoration: none;
+    transform: translateY(0px);
+  }
+`;
+
 const propTypes = {};
 
 const defaultProps = {};
@@ -131,6 +155,12 @@ export default function MainCarosel() {
           <i className="fas fa-chevron-right"></i>
           </ControlBtn>
       </Controls>
+
+      <Cta>
+        <CtaButton href="https://app.brandmeisteractivity.live/">
+          Launch the App
+        </CtaButton>
+      </Cta>
     </section>
   );
 }

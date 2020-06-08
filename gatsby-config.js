@@ -26,8 +26,21 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `news`,
+        path: `${__dirname}/src/news`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `caroselImages`,
         path: `${__dirname}/src/data`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        excerpt_separator: `<!-- excerpt -->`,
       },
     },
     `gatsby-transformer-sharp`,

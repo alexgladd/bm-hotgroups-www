@@ -4,13 +4,19 @@ import styled from '@emotion/styled';
 import { colors, sizes } from './theme';
 
 const SiteSection = styled.section`
-  & > p {
+  & p {
     padding-top: 1rem;
   }
 
   & p a {
     color: ${colors.primary};
   }
+
+  ${({ gridSpan }) => gridSpan && `
+  @media (min-width: 1024px) {
+    grid-column: span 2;
+  }
+  `}
 `;
 
 const SiteSectionHeader = styled.header`
@@ -21,18 +27,25 @@ const SiteSectionHeader = styled.header`
   background-color: ${colors.primary4};
   display: flex;
   align-items: center;
+
+  & > h2 {
+    font-weight: 500;
+  }
 `;
 
 const propTypes = {
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  span: PropTypes.bool,
 };
 
-const defaultProps = {};
+const defaultProps = {
+  span: false,
+};
 
-export default function Section({ title, children }) {
+export default function Section({ title, children, span }) {
   return (
-    <SiteSection id={title.toLowerCase()}>
+    <SiteSection id={title.toLowerCase()} gridSpan={span}>
       <SiteSectionHeader>
         <h2>{ title }</h2>
       </SiteSectionHeader>
