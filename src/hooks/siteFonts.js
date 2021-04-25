@@ -1,5 +1,5 @@
 /*
- * Site metadata query hook
+ * Site fonts hook
  */
 
 import { graphql, useStaticQuery } from 'gatsby';

@@ -23,7 +23,7 @@ const SiteHeader = styled.header`
 const SiteTitle = styled.h1`
   flex: 1 0 auto;
   font-size: 1.2rem;
-  font-weight: 500;
+  font-weight: 700;
 
   @media (min-width: 425px) {
     font-size: 1.3rem;
@@ -61,7 +61,11 @@ export default function Header({ path }) {
 
   return (
     <SiteHeader>
-      <SiteTitle>Brandmeister Top Activity</SiteTitle>
+      <SiteTitle>
+        <i className="fas fa-broadcast-tower"></i>
+        &nbsp;&nbsp;
+        Brandmeister Top Activity
+      </SiteTitle>
 
       <SiteMenu onClick={() => setMenuOpen(!menuOpen)}>
         <BurgerMenu src={burgerMenu} alt="Hamburger menu" />
