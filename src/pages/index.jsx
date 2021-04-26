@@ -18,10 +18,20 @@ const IndexPage = ({ location }) => (
 
     <Section title="About">
       <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-      labore et dolore magna aliqua. Amet justo donec enim diam vulputate ut pharetra sit. Fermentum
-      et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Magna eget est lorem ipsum
-      dolor sit amet.
+        The <a href="https://brandmeister.network/" target="_blank" rel="noopener noreferrer">Brandmeister</a> network
+        provides a fun way to connect with amateur radio enthusiasts across
+        the globe without needing to invest in expensive high-frequency (HF) equipment. There are lots
+        of different talkgroups on the network ranging from local to global and a variety of special
+        interests, but as a new user, it can be hard to figure out what talkgroups exist and which are
+        the most active.
+      </p>
+
+      <p>
+        <em>Brandmeister Top Activity</em> provides a way to see current activity and the most
+        active talkgroups and users on the Brandmeister network so you can join the
+        conversation! I created this app because I was once a new Brandmeister user myself, and
+        found it hard to figure out which talkgroups were active so I could test my setup and
+        eventually start chatting. I hope you enjoy it!
       </p>
 
       <p>
