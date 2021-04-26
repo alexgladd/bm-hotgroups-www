@@ -22,8 +22,12 @@ const SiteHeader = styled.header`
 
 const SiteTitle = styled.h1`
   flex: 1 0 auto;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
+
+  @media (min-width: 375px) {
+    font-size: 1.2rem;
+  }
 
   @media (min-width: 425px) {
     font-size: 1.3rem;
