@@ -29,7 +29,9 @@ export default function News() {
     <Section title="News">
       { newsItems.map((newsItem) => (
         <NewsItem key={newsItem.id}>
-          <NewsHeader>{format(parseISO(newsItem.frontmatter.date), 'PP')} &middot; {newsItem.frontmatter.title}</NewsHeader>
+          <NewsHeader>
+            {format(parseISO(newsItem.frontmatter.date), 'PP')} &middot; <em>{newsItem.frontmatter.title}</em>
+          </NewsHeader>
           <Content>
             {newsItem.excerpt}
             {' '}

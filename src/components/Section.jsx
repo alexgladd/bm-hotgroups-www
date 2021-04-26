@@ -6,7 +6,11 @@ import { colors, sizes } from './theme';
 const SiteSection = styled.section`
   scroll-margin-top: ${sizes.headerSize};
 
-  & p {
+  & h3 {
+    font-weight: 500;
+  }
+
+  & h3, p {
     padding-top: 1rem;
   }
 
