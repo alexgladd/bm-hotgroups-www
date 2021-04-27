@@ -6,6 +6,6 @@ This repo contains the site generator contents for the static *Brandmeister Top 
 
 ## License
 
-Copyright (c) 2020 Alex Gladd
+Copyright (c) 2021 Alex Gladd
 
 Licensed under the [MIT License](LICENSE)
