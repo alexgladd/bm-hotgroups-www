@@ -12,13 +12,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         name: `fonts`,
         path: `${__dirname}/src/fonts`,
       },
@@ -43,8 +36,9 @@ module.exports = {
         excerpt_separator: `<!-- excerpt -->`,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
-    `gatsby-plugin-sharp`,
   ],
 };
