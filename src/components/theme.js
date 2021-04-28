@@ -2,7 +2,7 @@
  * Global styles
  */
 
-import { css } from '@emotion/core';
+import { css } from '@emotion/react';
 
 export const colors = {
   primary: '#DD4B39',
