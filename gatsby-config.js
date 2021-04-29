@@ -10,6 +10,18 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `About Brandmeister Top Activity`,
+        short_name: `Brandmeister Top Activity`,
+        start_url: `/`,
+        background_color: `#F6F1F2`,
+        theme_color: `#DD4B39`,
+        display: `standalone`,
+        icon: `src/images/site-icon.png`,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `fonts`,
