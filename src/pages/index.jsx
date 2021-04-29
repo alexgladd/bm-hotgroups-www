@@ -37,7 +37,7 @@ const IndexPage = ({ location }) => (
       </p>
 
       <p>
-        The app is open-source on
+        <em>Brandmeister Top Activity</em> is open-source on
         {' '}
         <a href="https://github.com/alexgladd/bm-hotgroups" target="_blank" rel="noopener noreferrer">
           Github
