@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTag } from '@fortawesome/free-solid-svg-icons';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { colors, sizes } from './theme';
 import pkg from '../../package.json';
 
@@ -36,12 +39,12 @@ export default function Footer() {
     <SiteFooter>
       <div>
         <SiteVersion>
-          <i className="fas fa-tag"></i>
+          <FontAwesomeIcon icon={faTag} />
           {' '}
           { pkg.version }
         </SiteVersion>
         <a href="https://github.com/alexgladd/bm-hotgroups-www" target="_blank" rel="noopener noreferrer">
-          <i className="fab fa-github"></i>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
       </div>
 

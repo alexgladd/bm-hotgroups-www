@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import MainCarosel from '../components/MainCarosel';
@@ -35,12 +37,12 @@ const IndexPage = ({ location }) => (
       </p>
 
       <p>
-        This app is open-source on
+        The app is open-source on
         {' '}
         <a href="https://github.com/alexgladd/bm-hotgroups" target="_blank" rel="noopener noreferrer">
           Github
           {' '}
-          <i className="fab fa-github"></i>
+          <FontAwesomeIcon icon={faGithub} />
         </a>
       </p>
     </Section>

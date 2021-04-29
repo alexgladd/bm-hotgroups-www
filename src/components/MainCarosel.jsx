@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { colors, transitions } from './theme';
 import useCaroselImages from '../hooks/caroselImages';
 
@@ -139,7 +141,7 @@ export default function MainCarosel() {
 
       <Controls>
         <ControlBtn onClick={() => selected > 0 && setSelected(selected - 1)}>
-          <i className="fas fa-chevron-left"></i>
+          <FontAwesomeIcon icon={faChevronLeft} />
         </ControlBtn>
 
         <Selectors>
@@ -152,8 +154,8 @@ export default function MainCarosel() {
         </Selectors>
 
         <ControlBtn onClick={() => selected < images.length - 1 && setSelected(selected + 1)}>
-          <i className="fas fa-chevron-right"></i>
-          </ControlBtn>
+          <FontAwesomeIcon icon={faChevronRight} />
+        </ControlBtn>
       </Controls>
 
       <Cta>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBroadcastTower } from '@fortawesome/free-solid-svg-icons';
 import Navigation from './Navigation';
 import { colors, sizes } from './theme';
 import burgerMenu from './burger-menu.svg';
@@ -38,6 +40,14 @@ const SiteTitle = styled.h1`
   }
 `;
 
+const TitleText = styled.span`
+  margin-left: 0.75rem;
+
+  @media (min-width: 768px) {
+    margin-left: 1rem;
+  }
+`;
+
 const SiteMenu = styled.div`
   cursor: pointer;
   height: 1.25rem;
@@ -66,9 +76,8 @@ export default function Header({ path }) {
   return (
     <SiteHeader>
       <SiteTitle>
-        <i className="fas fa-broadcast-tower"></i>
-        &nbsp;&nbsp;
-        Brandmeister Top Activity
+        <FontAwesomeIcon icon={faBroadcastTower} />
+        <TitleText>Brandmeister Top Activity</TitleText>
       </SiteTitle>
 
       <SiteMenu onClick={() => setMenuOpen(!menuOpen)}>
