@@ -8,6 +8,11 @@ module.exports = {
     author: '@alexgladd',
   },
   plugins: [
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
+    `gatsby-plugin-fontawesome-css`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -43,15 +48,18 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `screenshots`,
+        path: `${__dirname}/src/images`,
+        ignore: [`**/site-icon.png`],
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         excerpt_separator: `<!-- excerpt -->`,
       },
     },
-    `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
-    `gatsby-transformer-json`,
-    `gatsby-plugin-fontawesome-css`,
   ],
 };

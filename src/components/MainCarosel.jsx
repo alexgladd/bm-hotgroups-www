@@ -1,22 +1,38 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { GatsbyImage } from 'gatsby-plugin-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { colors, transitions } from './theme';
 import useCaroselImages from '../hooks/caroselImages';
 
+const Section = styled.section`
+  @media (min-width: 1024px) {
+    margin-right: 1rem;
+  }
+`;
+
 const Frame = styled.div`
   position: relative;
-  height: 200px;
+  height: 175px;
   margin-bottom: 1rem;
+  border: 2px solid ${colors.accent};
   overflow: hidden;
 
+  @media (min-width: 375px) {
+    height: 208px;
+  }
+
   @media (min-width: 425px) {
-    height: 250px;
+    height: 240px;
   }
 
   @media (min-width: 768px) {
-    height: 400px;
+    height: 455px;
+  }
+
+  @media (min-width: 1024px) {
+    height: 402px;
   }
 `;
 
@@ -39,12 +55,6 @@ const Item = styled.div`
   ${({ selected }) => selected && `
   opacity: 1;
   `}
-`;
-
-const ItemImg = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 `;
 
 const ItemCaption = styled.div`
@@ -126,14 +136,18 @@ const defaultProps = {};
 
 export default function MainCarosel() {
   const [selected, setSelected] = useState(0);
-  const images = useCaroselImages();
+  const { images, screenshots } = useCaroselImages();
 
   return (
-    <section id="carosel">
+    <Section id="carosel">
       <Frame>
         { images.map((img, idx) => (
           <Item selected={idx === selected} tx={(idx - selected) * 100} key={img.title}>
-            <ItemImg src={img.src} alt={img.title} />
+            <GatsbyImage
+              image={screenshots[img.src]}
+              alt={img.title}
+              loading={idx === 0 ? 'eager' : 'lazy'}
+            />
             <ItemCaption>{img.caption}</ItemCaption>
           </Item>
         ))}
@@ -163,7 +177,7 @@ export default function MainCarosel() {
           Launch the App
         </CtaButton>
       </Cta>
-    </section>
+    </Section>
   );
 }
 

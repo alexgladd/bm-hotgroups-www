@@ -5,8 +5,8 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
 export default function useCaroselImages() {
-  const { allCaroselImagesJson } = useStaticQuery(graphql`
-    query CaroselImages {
+  const { allCaroselImagesJson, allFile } = useStaticQuery(graphql`
+    query CaroselImagesAndScreenshots {
       allCaroselImagesJson {
         edges {
           node {
@@ -16,8 +16,40 @@ export default function useCaroselImages() {
           }
         }
       }
+      allFile(filter: {sourceInstanceName: {eq: "screenshots"}}) {
+        edges {
+          node {
+            childImageSharp {
+              gatsbyImageData(placeholder: BLURRED)
+            }
+            relativePath
+          }
+        }
+      }
     }
   `);
 
-  return allCaroselImagesJson.edges.map((img) => img.node);
+  const images = allCaroselImagesJson.edges.map((img) => img.node);
+  const screenshots = allFile.edges.reduce((acc, f) => {
+    acc[f.node.relativePath] = f.node.childImageSharp.gatsbyImageData;
+    return acc;
+  }, {});
+
+  return {
+    images,
+    screenshots,
+  };
 }
+
+// export function useScreenshots() {
+//   const { allFile } = useStaticQuery(graphql`
+//     query Screenshots {
+      
+//     }
+//   `);
+
+//   return allFile.edges.reduce((acc, f) => {
+//     acc[f.node.relativePath] = f.node.childImageSharp.gatsbyImageData;
+//     return acc;
+//   }, {});
+// }
