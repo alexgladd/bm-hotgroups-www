@@ -10,7 +10,6 @@ const SiteNav = styled.nav`
   right: 0;
   background-color: ${colors.primary};
   box-shadow: -2px 4px 4px rgba(0, 0, 0, 0.25);
-  padding: 0.5rem 1rem;
   font-size: 1.2rem;
   font-weight: 500;
   visibility: hidden;
@@ -42,7 +41,6 @@ const SiteNav = styled.nav`
     opacity: 1;
     transition: none;
     box-shadow: none;
-    padding: unset;
   }
 `;
 
@@ -53,12 +51,20 @@ const NavList = styled.ul`
 `;
 
 const NavItem = styled.li`
-  padding: 0.5rem 0;
+  & > a {
+    height: ${sizes.headerSize};
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0 1rem;
+    background-color: ${colors.primary};
+    transition:
+      background-color ${transitions.timeMs} ease-in-out;
+  }
 
-  @media (min-width: 1024px) {
-    display: block;
-    padding: unset;
-    margin-left: 2rem;
+  & > a:hover, a:focus {
+    text-decoration: none;
+    background-color: ${colors.backgroundTransparent};
   }
 `;
 

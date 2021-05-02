@@ -14,6 +14,7 @@ export const colors = {
   accent: '#898695',
   accentTransparent: '#898695ee',
   background: '#F6F1F2',
+  backgroundTransparent: '#F6F1F222'
 };
 
 export const sizes = {

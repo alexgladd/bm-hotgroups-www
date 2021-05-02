@@ -18,7 +18,7 @@ const SiteHeader = styled.header`
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: 0 1rem;
   color: ${colors.background};
 `;
 
