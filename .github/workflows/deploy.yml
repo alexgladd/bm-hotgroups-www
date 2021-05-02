@@ -33,7 +33,7 @@ jobs:
 
     - name: S3 Sync
       run: |
-        aws s3 sync build s3://gladdbiz-bmactivity-www --delete
+        aws s3 sync public s3://gladdbiz-bmactivity-www --delete
 
     - name: CloudFront Invalidation
       run: |
