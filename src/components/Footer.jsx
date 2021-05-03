@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTag } from '@fortawesome/free-solid-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { colors, sizes } from './theme';
 import pkg from '../../package.json';
 
@@ -43,9 +44,9 @@ export default function Footer() {
           {' '}
           { pkg.version }
         </SiteVersion>
-        <a href="https://github.com/alexgladd/bm-hotgroups-www" target="_blank" rel="noopener noreferrer">
+        <OutboundLink href="https://github.com/alexgladd/bm-hotgroups-www" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faGithub} />
-        </a>
+        </OutboundLink>
       </div>
 
       <div>

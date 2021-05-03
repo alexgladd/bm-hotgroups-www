@@ -2,6 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import Layout from '../components/Layout';
 import Section from '../components/Section';
 import MainCarosel from '../components/MainCarosel';
@@ -20,7 +21,7 @@ const IndexPage = ({ location }) => (
 
     <Section title="About">
       <p>
-        The <a href="https://brandmeister.network/" target="_blank" rel="noopener noreferrer">Brandmeister</a> network
+        The <OutboundLink href="https://brandmeister.network/" target="_blank" rel="noopener noreferrer">Brandmeister</OutboundLink> network
         provides a fun way to connect with amateur radio enthusiasts across
         the globe without needing to invest in expensive high-frequency (HF) equipment. There are lots
         of different talkgroups on the network ranging from local to global and a variety of special
@@ -39,11 +40,11 @@ const IndexPage = ({ location }) => (
       <p>
         <em>Brandmeister Top Activity</em> is open-source on
         {' '}
-        <a href="https://github.com/alexgladd/bm-hotgroups" target="_blank" rel="noopener noreferrer">
+        <OutboundLink href="https://github.com/alexgladd/bm-hotgroups" target="_blank" rel="noopener noreferrer">
           Github
           {' '}
           <FontAwesomeIcon icon={faGithub} />
-        </a>
+        </OutboundLink>
       </p>
     </Section>
 

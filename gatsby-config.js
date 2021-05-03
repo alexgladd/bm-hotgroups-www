@@ -62,5 +62,20 @@ module.exports = {
         excerpt_separator: `<!-- excerpt -->`,
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'G-XQ1WPKS4XJ', // analytics
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 30 * 24 * 60 * 60,
+        },
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ],
 };

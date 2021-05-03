@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
+import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { colors, sizes, transitions } from './theme';
 
 const SiteNav = styled.nav`
@@ -85,7 +86,7 @@ export default function Navigation({ showNav, onClose, path }) {
     <SiteNav show={showNav} onClick={onClose} role="navigation">
       <NavList>
         <NavItem>
-          <a href="https://app.brandmeisteractivity.live/">Launch the App</a>
+          <OutboundLink href="https://app.brandmeisteractivity.live/">Launch the App</OutboundLink>
         </NavItem>
         
         { path !== '/' &&
