@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { colors, transitions } from './theme';
 import useCaroselImages from '../hooks/caroselImages';
+import ga from './gaEvents';
 
 const Section = styled.section`
   @media (min-width: 1024px) {
@@ -173,7 +174,7 @@ export default function MainCarosel() {
       </Controls>
 
       <Cta>
-        <CtaButton href="https://app.brandmeisteractivity.live/">
+        <CtaButton href="https://app.brandmeisteractivity.live/" onClick={ga.sendLaunchCtaFromMain}>
           Launch the App
         </CtaButton>
       </Cta>

@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 import { colors, sizes, transitions } from './theme';
+import ga from './gaEvents';
 
 const SiteNav = styled.nav`
   position: absolute;
@@ -86,7 +87,9 @@ export default function Navigation({ showNav, onClose, path }) {
     <SiteNav show={showNav} onClick={onClose} role="navigation">
       <NavList>
         <NavItem>
-          <OutboundLink href="https://app.brandmeisteractivity.live/">Launch the App</OutboundLink>
+          <OutboundLink href="https://app.brandmeisteractivity.live/" onClick={ga.sendLaunchCtaFromNav}>
+            Launch the App
+          </OutboundLink>
         </NavItem>
         
         { path !== '/' &&

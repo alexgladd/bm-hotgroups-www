@@ -71,6 +71,7 @@ module.exports = {
         gtagConfig: {
           anonymize_ip: true,
           cookie_expires: 30 * 24 * 60 * 60,
+          // debug_mode: true,
         },
         pluginConfig: {
           head: true,
