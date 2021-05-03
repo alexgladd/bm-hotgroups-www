@@ -3,8 +3,9 @@
 name: Deployment
 
 on:
-  release:
-    types: [ published ]
+  push:
+    branches:
+      - main
 
 jobs:
   deploy:
