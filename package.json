@@ -2,7 +2,7 @@
   "name": "bm-hotgroups-www",
   "private": true,
   "description": "Static site generator contents for www.brandmeisteractivity.live",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Alex Gladd",
   "dependencies": {
     "@emotion/react": "^11.1.5",
@@ -20,6 +20,7 @@
     "gatsby-plugin-manifest": "^3.4.0",
     "gatsby-plugin-react-helmet": "^4.4.0",
     "gatsby-plugin-sharp": "^3.4.0",
+    "gatsby-plugin-sitemap": "^4.0.0",
     "gatsby-source-filesystem": "^3.4.0",
     "gatsby-transformer-json": "^3.4.0",
     "gatsby-transformer-remark": "^4.1.0",

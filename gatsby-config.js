@@ -6,6 +6,8 @@ module.exports = {
     description:
       'Brandmeister Top Activity provides a way to see the most active talk groups and users on the Brandmeister DMR network',
     author: '@alexgladd',
+    url: 'https://www.brandmeisteractivity.live',
+    lastModified: '2021-05-02T19:27:00.000Z',
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -76,6 +78,41 @@ module.exports = {
         pluginConfig: {
           head: true,
         },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/./`,
+        query: `
+        query SitemapData {
+          site {
+            siteMetadata {
+              url
+              lastModified
+            }
+          }
+          allSitePage {
+            nodes {
+              path
+              context {
+                modifiedTime
+              }
+            }
+          }
+        }        
+        `,
+        resolveSiteUrl: ({ site }) => site.siteMetadata.url,
+        resolvePages: ({ allSitePage: { nodes: allPages }, site: { siteMetadata } }) => {
+          return allPages.map((page) => {
+            if (page.context && page.context.modifiedTime) return { path: page.path, modifiedTime: page.context.modifiedTime };
+            else return { path: page.path, modifiedTime: siteMetadata.lastModified };
+          });
+        },
+        serialize: ({ path, modifiedTime }) => ({
+          url: path,
+          lastmod: modifiedTime,
+        }),
       },
     },
   ],
