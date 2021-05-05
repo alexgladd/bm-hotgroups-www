@@ -18,10 +18,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
           node {
             id
             fileAbsolutePath
-            parent {
-              ... on File {
-                modifiedTime
-              }
+            frontmatter {
+              date
             }
           }
         }
@@ -44,7 +42,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       component: newsTemplate,
       context: {
         id: node.id,
-        modifiedTime: node.parent.modifiedTime,
+        modifiedTime: node.frontmatter.date,
       },
     })
   });
