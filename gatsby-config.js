@@ -7,7 +7,7 @@ module.exports = {
       'Brandmeister Top Activity provides a way to see the most active talk groups and users on the Brandmeister DMR network',
     author: '@alexgladd',
     url: 'https://www.brandmeisteractivity.live',
-    lastModified: '2021-05-02T19:27:00.000Z',
+    lastModified: '2021-05-09T11:56:00.000Z',
   },
   plugins: [
     `gatsby-plugin-image`,

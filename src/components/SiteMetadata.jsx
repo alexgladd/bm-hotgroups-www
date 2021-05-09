@@ -22,6 +22,7 @@ export default function SiteMetadata({ title, description, lang }) {
   return (
     <Helmet htmlAttributes={{ lang }} title={title} titleTemplate={`${siteMetadata.title} - %s`}>
       <meta name="description" property="og:description" content={metaDescription} />
+      <meta name="keywords" content="brandmeister activity, brandmeister talkgroups live, brandmeister talkgroups, brandmeister, brandmeister live, best brandmeister talkgroups"></meta>
       <meta property="og:title" content={title} />
       <meta property="og:type" content="website" />
       <meta property="og:locale" content={lang} />
