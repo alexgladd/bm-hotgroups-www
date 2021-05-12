@@ -38,7 +38,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const pagePath = pathRE.exec(node.fileAbsolutePath)[1];
 
     createPage({
-      path: pagePath,
+      path: `${pagePath}/`,
       component: newsTemplate,
       context: {
         id: node.id,

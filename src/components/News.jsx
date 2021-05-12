@@ -35,7 +35,7 @@ export default function News() {
           <Content>
             {newsItem.excerpt}
             {' '}
-            <Link to={/(\/news\/\d{4}-\d{2}-\d{2}-.+)\.md$/.exec(newsItem.fileAbsolutePath)[1]}>Read more...</Link>
+            <Link to={`${/(\/news\/\d{4}-\d{2}-\d{2}-.+)\.md$/.exec(newsItem.fileAbsolutePath)[1]}/`}>Read more...</Link>
           </Content>
         </NewsItem>
       ))}
