@@ -10,7 +10,6 @@ const defaultProps = {};
 export default function SupportBtn() {
   return (
     <>
-      <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
       <OutboundLink
         href="https://www.buymeacoffee.com/alexgladd"
         className="bmc-button"

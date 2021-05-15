@@ -58,23 +58,27 @@ export const globalStyles = css`
 
 export function getFontStyles(regular, medium, bold) {
   return css`
+    @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     @font-face {
       font-family: 'Noto Sans';
       src: url(${regular.publicURL}) format('truetype');
       font-style: normal;
       font-weight: 400;
+      font-display: swap;
     }
     @font-face {
       font-family: 'Noto Sans';
       src: url(${medium.publicURL}) format('truetype');
       font-style: normal;
       font-weight: 500;
+      font-display: swap;
     }
     @font-face {
       font-family: 'Noto Sans';
       src: url(${bold.publicURL}) format('truetype');
       font-style: normal;
       font-weight: 700;
+      font-display: swap;
     }
   `;
 }

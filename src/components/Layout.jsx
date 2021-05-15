@@ -43,6 +43,7 @@ export default function Layout({ title, children, path }) {
   return (
     <>
       <SiteMetadata title={title} />
+
       <Global styles={fontStyles} />
       <Global styles={globalStyles} />
 

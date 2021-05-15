@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import useSiteMetadata from '../hooks/siteMetadata';
+import useSiteFonts from '../hooks/siteFonts';
 
 const propTypes = {
   title: PropTypes.string.isRequired,
@@ -15,6 +16,7 @@ const defaultProps = {
 };
 
 export default function SiteMetadata({ title, description, lang }) {
+  const fonts = useSiteFonts();
   const siteMetadata = useSiteMetadata();
 
   const metaDescription = description || siteMetadata.description;
@@ -30,6 +32,10 @@ export default function SiteMetadata({ title, description, lang }) {
       <meta name="twitter:creator" content={siteMetadata.author} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
+      {/* Preload fonts */}
+      <link rel="preload" as="font" href={fonts.regular.publicURL} crossOrigin="anonymous" />
+      <link rel="preload" as="font" href={fonts.medium.publicURL} crossOrigin="anonymous" />
+      <link rel="preload" as="font" href={fonts.bold.publicURL} crossOrigin="anonymous" />
     </Helmet>
   );
 }
